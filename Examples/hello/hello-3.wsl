@@ -1,0 +1,8 @@
+VAR < x := 0, y := 0 >:
+WHILE x = 0 DO
+  {x = 0};
+  IF TRUE
+    THEN PRINT("Hello World")
+    ELSE PRINT("Goodby cruel world") FI;
+  x := x + 1 OD;
+{x <> 0} ENDVAR

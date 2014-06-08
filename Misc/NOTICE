@@ -1,0 +1,37 @@
+FME - FermaT Maintenance Environment
+Copyright (c) 2006-2014 Matthias Ladkau
+
+This software includes the FermaT Program Transformation System
+Copyright (C) Martin Ward
+(Released under the GNU General Public License)
+http://www.gkc.org.uk/fermat.html
+
+This software uses the eaio: StringSearch library
+Copyright (c) 2003-2007 Johann Burkard (<mailto:jb@eaio.com>)
+(Released under the MIT license)
+http://johannburkard.de/software/stringsearch/
+
+This software uses the Tonic Look and Feel library
+Copyright (c) 1999 Digitprop – Paper design
+(Released under the GNU Lesser General Public License)
+http://digitprop.com/tonic-lf/
+
+This software uses parts of Apache Xerces
+Copyright (c) Apache Foundation
+(Released under the Apache License, Version 2.0)
+http://xerces.apache.org/
+
+This software uses the ZVTM - Zoomable Visual Transformation Machine library
+Copyright (c) INRIA
+(Released under the GNU Lesser General Public License)
+http://zvtm.sourceforge.net/
+
+This software includes 7-Zip command line versions for Windows and Linux
+Copyright (C) 1999-2010 Igor Pavlov
+(Released under the GNU Lesser General Public License)
+http://www.7-zip.org/
+
+This software includes Strawberry Perl 5.10.0.5
+(Contains several subcomponents released under various open-source licenses
+ see res/strawberry-perl-x.x.x.x-portable_licenses for further details)
+http://strawberryperl.com/
