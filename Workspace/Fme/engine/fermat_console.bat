@@ -8,7 +8,7 @@ rem
 rem   Description:
 rem
 rem     This is a start script for the 
-rem     FermaT transformation engine console
+rem     FermaT transformation engine console.
 rem
 rem ***********************************************
 

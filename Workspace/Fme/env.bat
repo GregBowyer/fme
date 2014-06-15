@@ -2,7 +2,7 @@
 
 rem ***********************************************
 rem
-rem   File: shell.bat
+rem   File: env.bat
 rem
 rem   Author: Matthias Ladkau
 rem
@@ -39,13 +39,13 @@ rem Test commands
 
 cmd /C java -version > NUL 2> NUL
 if not "%errorlevel%" == "0" (
-    set ERRORMSG="java" command not found. Please install a current JDK and put its bin directory in your PATH variable.
+    set ERRORMSG="'java' command not found. Please install a current JDK and put its bin directory in your PATH variable."
     goto error
 )
 
 cmd /C scmfmt --version > NUL 2> NUL
 if not "%errorlevel%" == "0" (
-    set ERRORMSG="scmfmt" command not found. Cannot continue...
+    set ERRORMSG="'scmfmt' command not found. Cannot continue..."
     goto error
 )
 
