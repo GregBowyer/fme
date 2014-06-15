@@ -60,7 +60,7 @@ public class CM {
 
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         
-        config.put("gui.MainFrame.InitWidth", new Integer(screenSize.width-100));
+        config.put("gui.MainFrame.InitWidth", Math.min(new Integer(screenSize.width-100), 1600));
         config.put("gui.MainFrame.InitHeight", new Integer(screenSize.height-100));
         config.put("gui.MainFrame.InitXPos", new Integer(50));
         config.put("gui.MainFrame.InitYPos", new Integer(50));
