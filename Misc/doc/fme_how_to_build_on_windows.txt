@@ -1,0 +1,59 @@
+How to build the FME on Windows
+===============================
+
+1. Install JDK:
+--------------
+
+Download and install the latest JDK. I got the JDK from here:
+http://www.oracle.com/technetwork/java/javase/downloads/
+
+Make sure java and javac are in the PATH. I had:
+
+[ml@shroom ~]$ javac -version
+javac 1.8.0_05
+[ml@shroom ~]$ java -version
+java version "1.8.0_05"
+Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.5-b02, mixed mode)
+
+C:\Users\ml>javac -version
+javac 1.8.0_05
+
+C:\Users\ml>java -version
+java version "1.8.0_05"
+Java(TM) SE Runtime Environment (build 1.8.0_05-b13)
+
+You don't need to install perl since the FME for windows comes already with Strawberry Perl. 
+
+2. Install ant
+--------------
+
+Get the latest binary distribution here:
+http://ant.apache.org/bindownload.cgi
+
+Make sure ant is also in your PATH. I had:
+
+C:\Users\ml>ant -version
+Apache Ant(TM) version 1.9.4 compiled on April 29 2014
+
+3. Checkout the source from github
+----------------------------------
+Checkout the source from https://github.com/krotik/fme
+
+You can use SVN to checkout github sources if you don't like git. This checks out the latest source into the current directory:
+
+svn checkout https://github.com/krotik/fme/trunk .
+
+
+4. Build the FME distribution version
+-------------------------------------
+
+To extract Strawberry Perl go to <checkout root>/Workspace/Fme and run (if you just want to assemble a version you don't need to do this):
+
+env.bat
+
+in the same directory run then:
+
+ant assemble
+
+after that there should be a working distribution in <checkout root>/Build.

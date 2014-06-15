@@ -1,0 +1,4 @@
+Running the FME on Windows
+==========================
+
+The steps described in the FME tutorial are no longer true. The FME only requires now a working (current) Java environment. The first start might take a bit longer since some required components need to be extracted (once).
