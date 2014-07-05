@@ -14,7 +14,7 @@
 
 # Set paths
 ROOT_PATH=${0/%\/env.sh}
-cd $ROOT_PATH
+cd $ROOT_PATH 2>/dev/null
 ROOT_PATH=`pwd`
 
 SZIP_HOME=$ROOT_PATH/res/p7zip_9_13_linux
