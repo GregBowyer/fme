@@ -11,7 +11,7 @@
 #
 # ***********************************************
 
-ROOT_PATH=`${0/%\/fme.sh}`
+ROOT_PATH=${0/%\/fme.sh}
 cd $ROOT_PATH
 ROOT_PATH=`pwd`
 
