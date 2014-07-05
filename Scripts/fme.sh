@@ -11,8 +11,9 @@
 #
 # ***********************************************
 
-ROOT_PATH=`pwd ${0/%\/fme.sh}`
+ROOT_PATH=`${0/%\/fme.sh}`
 cd $ROOT_PATH
+ROOT_PATH=`pwd`
 
 . $ROOT_PATH/env.sh
 if [ $? -ne 0 ]; then 
