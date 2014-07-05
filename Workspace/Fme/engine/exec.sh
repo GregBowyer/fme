@@ -12,7 +12,9 @@
 # ***********************************************
 
 if [ ! "$1" = "noecho" ]; then
-    ROOT_PATH=`pwd ${0/%\/fermat_console.sh}`
+    ROOT_PATH=${0/%\/exec.sh}
+    cd $ROOT_PATH
+    ROOT_PATH=`pwd`
     cd $ROOT_PATH/..
     . ./env.sh
     cd $ROOT_PATH

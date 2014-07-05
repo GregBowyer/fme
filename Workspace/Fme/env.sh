@@ -17,16 +17,22 @@ ROOT_PATH=${0/%\/env.sh}
 cd $ROOT_PATH 2>/dev/null
 ROOT_PATH=`pwd`
 
-SZIP_HOME=$ROOT_PATH/res/p7zip_9_13_linux
-FERMAT3_HOME=$ROOT_PATH/engine/fermat3/Linux
+if [ "$(uname)" == "Darwin" ]; then
+    FERMAT3_HOME=$ROOT_PATH/engine/fermat3/Darwin
+    SZIP_HOME=$ROOT_PATH/res/p7zip_9_20_mac_os
+else
+    FERMAT3_HOME=$ROOT_PATH/engine/fermat3/Linux
+    SZIP_HOME=$ROOT_PATH/res/p7zip_9_13_linux/bin
+fi
 
-PATH=$FERMAT3_HOME:$SZIP_HOME/bin:$PATH
+PATH=$FERMAT3_HOME:$SZIP_HOME:$PATH
 export PATH
 
 # Make sure executable permissions are set
 
-files=( $ROOT_PATH/fme.sh $ROOT_PATH/env.sh $ROOT_PATH/res/p7zip_9_13_linux/bin/7za $ROOT_PATH/engine/exec.sh 
-        $ROOT_PATH/engine/fermat_console.sh $ROOT_PATH/engine/metrics.sh $ROOT_PATH/engine/fermat3/Linux/scmfmt )
+files=( $ROOT_PATH/fme.sh $ROOT_PATH/env.sh $ROOT_PATH/res/p7zip_9_13_linux/bin/7za $ROOT_PATH/engine/exec.sh
+        $ROOT_PATH/res/p7zip_9_20_mac_os/bin/7za $ROOT_PATH/engine/fermat_console.sh $ROOT_PATH/engine/metrics.sh 
+        $ROOT_PATH/engine/fermat3/Linux/scmfmt $ROOT_PATH/engine/fermat3/Darwin/scmfmt )
 for file in "${files[@]}"
 do
     if [ -e "${file}" -a ! -x "${file}" ]; then chmod u+x "${file}"; fi
