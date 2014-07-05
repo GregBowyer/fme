@@ -30,5 +30,4 @@ The FME requires a working Java 7 (or later) environment. There is a short tutor
 
 ## TODO
 
-* Mac version of the FME.
 * Documentation needs expanding / updating.
