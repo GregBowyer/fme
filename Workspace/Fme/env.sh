@@ -13,9 +13,8 @@
 # ***********************************************
 
 # Set paths
-ROOT_PATH=${0/%\/env.sh}
-cd $ROOT_PATH 2>/dev/null
-ROOT_PATH=`pwd`
+ROOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $ROOT_PATH
 
 if [ "$(uname)" == "Darwin" ]; then
     FERMAT3_HOME=$ROOT_PATH/engine/fermat3/Darwin

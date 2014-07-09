@@ -11,9 +11,8 @@
 #
 # ***********************************************
 
-ROOT_PATH=${0/%\/fme.sh}
+ROOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd $ROOT_PATH
-ROOT_PATH=`pwd`
 
 . $ROOT_PATH/env.sh
 if [ $? -ne 0 ]; then 

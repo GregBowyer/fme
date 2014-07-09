@@ -12,9 +12,7 @@
 # ***********************************************
 
 if [ ! "$1" = "noecho" ]; then
-    ROOT_PATH=${0/%\/exec.sh}
-    cd $ROOT_PATH
-    ROOT_PATH=`pwd`
+    ROOT_PATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     cd $ROOT_PATH/..
     . ./env.sh
     cd $ROOT_PATH
